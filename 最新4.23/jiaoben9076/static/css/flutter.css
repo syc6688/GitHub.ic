@@ -1,0 +1,1352 @@
+
+
+
+/* ******************************************************
+	Lightbox
+*********************************************************/
+
+.flutter-lightbox {
+  color:#000;
+  padding:0;
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:999;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+}
+.flutter-lightbox:target {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.flutter-full-content {
+    background: rgba(31, 30, 31, 0.64) none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    padding: 5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.flutter-small-content {
+    background: rgba(31, 30, 31, 0.64) none repeat scroll 0 0;
+    bottom: 25%;
+    color: #fff;
+    left: 25%;
+    padding: 5em;
+    position: absolute;
+    right: 25%;
+    top: 25%;
+}
+
+.flutter-full-img {
+    height: auto;
+    width: 100%;
+}
+.close-me::after {
+    background-color: #fc4f7c;
+    border-radius: 50%;
+    color: #f7f7f7;
+    content: "\00D7";
+    cursor: pointer;
+    display: inline-block;
+    font-size: 17px;
+    height: 2em;
+    line-height: 2rem;
+    margin: 0;
+    position: absolute;
+    right: 2%;
+    text-align: center;
+    top: 2%;
+    width: 2em;
+    z-index: 3;
+}
+
+.close-me:hover:after{
+	background-color: #f80544;
+}
+
+/* ******************************************************
+	Responsive Grids
+*********************************************************/
+
+.flutter-container {
+	margin: 0 auto;
+}
+.flut-row:before, .flut-row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.flut-row:after {
+  clear: both;
+}
+[class^="col-flut-"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+}
+
+
+@media (min-width: 768px) {
+  .flutter-container {
+    width: 750px;
+  }
+  [class^="col-flut-"] {
+    float: left;
+    width: 49.9999999999%;
+  }
+  .col-flut-6, .col-flut-12 {
+    width: 100%;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+	.flutter-container {
+		width: 1000px;
+	}
+	.col-flut-1 {
+		width:16.6%;
+	}
+	.col-flut-2 {
+		width:33.33%;
+	}
+	.col-flut-3 {
+		width:50%;
+	}
+	.col-flut-4 {
+		width: 66.664%;
+	}
+	.col-flut-5 {
+		width: 83.33%;
+	}
+	
+
+}
+
+
+
+/* ******************************************************
+	Basic Styling
+*********************************************************/
+
+.Flutters {
+
+	-webikt-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+    background: #2c3e50 none repeat scroll 0 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-family: "Raleway",Arial,sans-serif;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.Flutters figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.Flutters * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Flutters img {
+  max-width: 100%;
+  position: relative;
+  display:block;
+  top: 0;
+  opacity: 1.0;
+  left: 0;
+  -webkit-transition: 1.3s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+
+/* ******************************************************
+	Effect 1: flutEffect_1
+*********************************************************/
+
+.flutEffect_1 .overlay {
+  height: 100%;
+  right: -80px;
+  width: 70px;
+  position: absolute;
+  border-left: 2px solid #ffffff;
+  top: 0;
+  padding: 8px 4px;
+  color: #ffffff;
+  background: #161613;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.flutEffect_1 .overlay a i {
+  display: inline-block;
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 0.75;
+  width: 100%;
+  padding: 5px 15px;
+  position: relative;
+  right: -60px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.flutEffect_1:hover img {
+  opacity: 0.5;
+  left: -60px;
+}
+.flutEffect_1:hover .overlay {
+  right: 0;
+  opacity: 1;
+}
+.flutEffect_1:hover .overlay a i {
+  right: 0;
+}
+.flutEffect_1:hover a:first-child i {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.flutEffect_1:hover a:nth-child(2) i {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.flutEffect_1:hover a:nth-child(3) i {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* ******************************************************
+	Effect 2: flutEffect_2
+*********************************************************/
+
+.flutEffect_2 img {
+  max-width: 100%;
+  display:block;
+  opacity: 1.0;
+  -webkit-transition: opacity 0.35s, scale(1);
+  transition: opacity 0.35s, scale(1);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+.flutEffect_2 > .overlay a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+}
+.flutEffect_2 > .overlay a i {
+  display: inline-block;
+  font-size: 25px;
+  opacity: 0;
+  top: 55%;
+  position: relative;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_2 > .overlay::before {
+  border: 1px solid #6d6d6d;
+  box-shadow: 0 0 0 30px #161613;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale3d(1.5, 1.5, 1);
+  transform: scale3d(1.5, 1.5, 1);
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+.flutEffect_2:hover img {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0.3;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_2:hover > .overlay i {
+  opacity: 0.8;
+  top: 50%;
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+.flutEffect_2:hover > .overlay::before {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+/* ******************************************************
+	Effect 3: flutEffect_3
+*********************************************************/
+
+.flutEffect_3 > .overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  position: absolute;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.flutEffect_3 > .overlay::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  background-color: #000000;
+  opacity: 0;
+  bottom: -58px;
+  left: -84px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: rotate(45deg) translate3d(-100%, 0%, 0);
+  transform: rotate(45deg) translate3d(-100%, 0%, 0);
+}
+.flutEffect_3 > .overlay::before {
+  content: '';
+  position: absolute;
+  width: 350px;
+  height: 54px;
+  opacity: 0;
+  background-color: #000000;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  bottom: 54px;
+  left: -81px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: rotate(45deg) translate3d(100%, 0%, 0);
+  transform: rotate(45deg) translate3d(100%, 0%, 0);
+}
+.flutEffect_3 > .overlay a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+.flutEffect_3 > .overlay i:before {
+  display: inline-block;
+  font-size: 25px;
+  color: #ffffff;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  padding: 50px;
+  position: absolute;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  z-index: 1;
+}
+.flutEffect_3:hover img {
+  opacity: 0.5;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.flutEffect_3:hover > .overlay {
+  bottom: 0;
+  opacity: 1;
+}
+.flutEffect_3:hover > .overlay::after,
+.flutEffect_3:hover > .overlay::before {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_3:hover > .overlay::after {
+  -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+  transform: rotate(45deg) translate3d(0, 0, 0);
+  opacity: 1;
+}
+.flutEffect_3:hover > .overlay::before {
+  -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+  transform: rotate(45deg) translate3d(0, 0, 0);
+  opacity: 1;
+}
+.flutEffect_3:hover > .overlay i::before {
+  opacity: 1;
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+
+
+/* ******************************************************
+	Effect 4: flutEffect_4
+*********************************************************/
+
+.flutEffect_4 figcaption {
+  font-size: 1.25em;
+}
+.flutEffect_4 > .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3em 3em;
+  width: 100%;
+  height: 100%;
+}
+.flutEffect_4 > .overlay::before {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  bottom: 50%;
+  left: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: #ffffff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.flutEffect_4 h2,
+.flutEffect_4 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+.flutEffect_4 h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0%, 100%, 0);
+  transform: translate3d(0%, 100%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.flutEffect_4 h2 span {
+  font-weight: 800;
+}
+.flutEffect_4 p {
+  font-weight: 200  ;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_4 a {
+ height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+}
+
+.flutEffect_4:hover img {
+  opacity: 0.35;
+}
+.flutEffect_4:hover > .overlay h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.flutEffect_4:hover > .overlay p {
+  opacity: 0.8;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+
+.flutEffect_4:hover > .overlay::before {
+  background: rgba(255, 255, 255, 0);
+  top: 30px;
+  bottom: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+
+/* ******************************************************
+	Effect 5: flutEffect_5
+*********************************************************/
+
+
+.flutEffect_5 figcaption {
+  font-size: 1.25em;
+}
+.flutEffect_5 > .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3em 3em;
+  width: 100%;
+  height: 100%;
+}
+.flutEffect_5 > .overlay::before {
+  position: absolute;
+  top: 30px;
+  right: 50%;
+  bottom: 30px;
+  left: 50%;
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: #ffffff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.flutEffect_5 h2,
+.flutEffect_5 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+.flutEffect_5 h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0%, 100%, 0);
+  transform: translate3d(0%, 100%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.flutEffect_5 h2 span {
+  font-weight: 800;
+}
+.flutEffect_5 p {
+  font-weight: 200  ;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_5 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+.flutEffect_5:hover img {
+  opacity: 0.35;
+}
+.flutEffect_5:hover > .overlay h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.flutEffect_5:hover > .overlay p {
+  opacity: 0.8;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.flutEffect_5:hover > .overlay::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  right: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+/* ******************************************************
+	Effect 6: flutEffect_6
+*********************************************************/
+
+
+.flutEffect_6 figcaption {
+  bottom: 0;
+  left: 0;
+  padding: 30px 3em;
+}
+.flutEffect_6 figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 100%;
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.flutEffect_6 h2,
+.flutEffect_6 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+.flutEffect_6 h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(30%, 0%, 0);
+  transform: translate3d(30%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.flutEffect_6 h2 span {
+  font-weight: 800;
+}
+.flutEffect_6 p {
+  font-weight: 200;
+  -webkit-transform: translate3d(0%, 30%, 0);
+  transform: translate3d(0%, 30%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_6 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+.flutEffect_6:hover img {
+  opacity: 0.3;
+}
+.flutEffect_6:hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.flutEffect_6:hover figcaption p {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.flutEffect_6:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* ******************************************************
+	Effect 71: flutEffect_7
+*********************************************************/
+
+
+.flutEffect_7 figcaption > .overlay {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+.flutEffect_7 figcaption::before {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  width: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.flutEffect_7 h2,
+.flutEffect_7 p {
+  margin: 0;
+  padding: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+}
+.flutEffect_7 h2 {
+  text-align: right;
+  display: inline-block;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(50%, 0%, 0);
+  transform: translate3d(50%, 0%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_7 h2 span {
+  font-weight: 800;
+}
+.flutEffect_7 p {
+  display: block;
+  bottom: 0;
+  text-align: left;
+  font-weight: 300;
+  top: 0%;
+  color: #000;
+  background: #ffffff;
+  -webkit-transform: translate3d(-50%, 0%, 0);
+  transform: translate3d(-50%, 0%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_7 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+.flutEffect_7:hover img {
+  opacity: 0.7;
+}
+.flutEffect_7:hover figcaption h2,
+.flutEffect_7:hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.flutEffect_7:hover figcaption h2 {
+  opacity: 1;
+}
+.flutEffect_7:hover figcaption p {
+  opacity: 1;
+}
+.flutEffect_7:hover figcaption::before {
+  background: #ffffff;
+  top: 0px;
+  bottom: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+/* ******************************************************
+	Effect 8: flutEffect_8
+*********************************************************/
+
+
+.flutEffect_8 figcaption > .overlay {
+  float: left;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+.flutEffect_8 figcaption::before {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 100%;
+  right: 5px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.flutEffect_8 h2,
+.flutEffect_8 p {
+  margin: 0;
+  padding: 20px;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.45s,-webkit-transform 0.3s ease-in,-moz-transform 0.3s ease-in,-o-transform 0.3s ease-in,transform 0.3s ease-in;
+}
+.flutEffect_8 h2 {
+  font-size: 1.3em;
+  top: 0;
+  text-align: right;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translate3d(-50%, 0%, 0);
+  transform: translate3d(-50%, 0%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_8 h2 span {
+  font-weight: 800;
+}
+.flutEffect_8 p {
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_8 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+.flutEffect_8:hover img,
+.flutEffect_8.hover img {
+  opacity: 0.7;
+}
+.flutEffect_8:hover figcaption h2,
+.flutEffect_8.hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.flutEffect_8:hover figcaption p,
+.flutEffect_8.hover figcaption p {
+  opacity: 1;
+  -webkit-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+.flutEffect_8:hover figcaption::before,
+.flutEffect_8.hover figcaption::before {
+  left: 5px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* ******************************************************
+	Effect 9: flutEffect_9
+*********************************************************/
+
+
+.flutEffect_9 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.flutEffect_9 figcaption > .overlay {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 28px;
+  left: 100%;
+  padding: 7px 10px;
+  border-radius: 0 0 0 5px;
+  -webkit-transition: left 0.35s;
+  transition: left 0.35s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_9 figcaption > .overlay i {
+  font-size: 23px;
+  padding: 6px;
+  color: #000000;
+  opacity: 0.6;
+  position: relative;
+  right: -150px;
+  -webkit-transition: right 0.35s, opacity 0.35s;
+  transition: right 0.35s, opacity 0.35s;
+}
+.flutEffect_9 figcaption > .overlay a {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.flutEffect_9 figcaption > .overlay a:hover {
+  opacity: 1;
+}
+.flutEffect_9 figcaption::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  background-image: linear-gradient(to top, #000000 0%, transparent 50%, #000000 100%);
+}
+.flutEffect_9 h2 {
+  border-radius: 0 5px 0 0;
+  text-align: right;
+  margin: 0;
+  padding: 20px;
+  position: absolute;
+  font-size: 1em;
+  bottom: 70px;
+  right: 100%;
+  width: 90%;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #000000;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.flutEffect_9 h2 span {
+  font-weight: 800;
+}
+.flutEffect_9:hover img,
+.flutEffect_9.hover img {
+  opacity: 0.7;
+}
+.flutEffect_9:hover figcaption > .overlay,
+.flutEffect_9.hover figcaption > .overlay {
+  left: 35%;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.flutEffect_9:hover figcaption h2,
+.flutEffect_9.hover figcaption h2 {
+  right: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_9:hover figcaption::before,
+.flutEffect_9.hover figcaption::before {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.flutEffect_9:hover figcaption i,
+.flutEffect_9.hover figcaption i {
+  right: 0px;
+}
+.flutEffect_9:hover a:first-child i,
+.flutEffect_9.hover a:first-child i {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.flutEffect_9:hover a:nth-child(2) i,
+.flutEffect_9.hover a:nth-child(2) i {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.flutEffect_9:hover a:nth-child(3) i,
+.flutEffect_9.hover a:nth-child(3) i {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+/* ******************************************************
+	Effect 10: .flutEffect_10
+*********************************************************/
+
+
+.flutEffect_10 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.flutEffect_10 figcaption h2 {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 16px 12px;
+  position: absolute;
+  font-size: 1em;
+  bottom: 35%;
+  right: 0;
+  left: 0;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: #000000;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.flutEffect_10 figcaption h2 span {
+  font-weight: 800;
+}
+.flutEffect_10 figcaption > .overlay {
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  right: 45px;
+  bottom: 40px;
+  text-align: center;
+  padding: 0 12px;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+  -webkit-transform: translate(0, -40px);
+  transform: translate(0, -40px);
+}
+.flutEffect_10 figcaption > .overlay i {
+  font-size: 23px;
+  padding: 6px;
+  color: #000000;
+  opacity: 0;
+  position: relative;
+  top: -50px;
+  -webkit-transition: top 0.35s, opacity 0.35s;
+  transition: top 0.35s, opacity 0.35s;
+}
+.flutEffect_10 figcaption a {
+  opacity: 0.8;
+}
+.flutEffect_10 figcaption a:hover {
+  opacity: 1;
+}
+.flutEffect_10 figcaption::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  background-image: linear-gradient(to top, #000000 0%, transparent 50%, #000000 100%);
+}
+.flutEffect_10:hover img,
+.flutEffect_10.hover img {
+  opacity: 0.7;
+}
+.flutEffect_10:hover figcaption h2,
+.flutEffect_10.hover figcaption h2 {
+  -webkit-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+}
+.flutEffect_10:hover figcaption > .overlay,
+.flutEffect_10.hover figcaption > .overlay {
+  -webkit-transform: translate(0, -15px);
+  transform: translate(0, -15px);
+}
+.flutEffect_10:hover figcaption::before,
+.flutEffect_10.hover figcaption::before {
+  opacity: 0.8;
+}
+.flutEffect_10:hover figcaption i,
+.flutEffect_10.hover figcaption i {
+  top: 0px;
+  opacity: 0.7;
+}
+.flutEffect_10:hover a:first-child i,
+.flutEffect_10.hover a:first-child i {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.flutEffect_10:hover a:nth-child(2) i,
+.flutEffect_10.hover a:nth-child(2) i {
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.flutEffect_10:hover a:nth-child(3) i,
+.flutEffect_10.hover a:nth-child(3) i {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+
+/* ******************************************************
+	Effect 11: .flutEffect_11
+*********************************************************/
+
+
+.flutEffect_11 .center {
+  border-radius: 5px;
+  display: block;
+  content: '';
+  position: absolute;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  height: 70px;
+  width: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.flutEffect_11 .center i {
+  font-size: 38px;
+  padding: 6px;
+  color: #ffffff;
+  line-height: 70px;
+  opacity: 0.3;
+}
+.flutEffect_11 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.flutEffect_11 figcaption > .overlay {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+.flutEffect_11 figcaption > .overlay .icons {
+  bottom: 50%;
+  position: absolute;
+  padding-left: 30px;
+  -webkit-transform: translate(0%, -20px);
+  transform: translate(0%, -20px);
+}
+.flutEffect_11 figcaption > .overlay .icons i {
+  color: #fff;
+  padding: 4px;
+  font-size: 22px;
+  position: relative;
+  left: -150px;
+  opacity: 0;
+  -webkit-transition: opacity 0.45s, left 0.45s;
+  transition: opacity 0.45s, left 0.45s;
+}
+.flutEffect_11 figcaption a {
+  opacity: 0.7;
+}
+.flutEffect_11 figcaption a:hover {
+  opacity: 1;
+}
+.flutEffect_11 h3 {
+  background-color: #222;
+  border-radius: 5px 0 0 5px;
+  word-spacing: -0.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1em;
+  top: 50%;
+  right: 0;
+  padding: 4px 35px 4px 10px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+  -webkit-transform: translate(100%, 0px);
+  transform: translate(100%, 0px);
+}
+.flutEffect_11 .red {
+  background-color: #8c212a;
+}
+.flutEffect_11 .yellow {
+  background-color: #945600;
+}
+.flutEffect_11:hover img,
+.flutEffect_11.hover img {
+  opacity: 0.5;
+}
+.flutEffect_11:hover figcaption .icons i,
+.flutEffect_11.hover figcaption .icons i {
+  left: 0;
+  opacity: 1;
+}
+.flutEffect_11:hover .center,
+.flutEffect_11.hover .center {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.flutEffect_11:hover .center i,
+.flutEffect_11.hover .center i {
+  -webkit-transform: translate(0%, -10px);
+  transform: translate(0%, -10px);
+}
+.flutEffect_11:hover h3,
+.flutEffect_11.hover h3 {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0px);
+  transform: translate(0%, 0px);
+}
+.flutEffect_11:hover a:first-child i,
+.flutEffect_11.hover a:first-child i {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.flutEffect_11:hover a:nth-child(2) i,
+.flutEffect_11.hover a:nth-child(2) i {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.flutEffect_11:hover a:nth-child(3) i,
+.flutEffect_11.hover a:nth-child(3) i {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* ******************************************************
+	Effect 12: .flutEffect_12
+*********************************************************/
+
+
+.flutEffect_12 > img {
+  opacity: 1;
+  width: 100%;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.flutEffect_12 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.flutEffect_12 figcaption h2 {
+    background-color: #000000;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+    left: 0;
+    margin: 0;
+    padding: 15px 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transition: top 0.5s ease 0s;
+}
+.flutEffect_12 figcaption h2 span {
+  font-weight: 800;
+}
+.flutEffect_12 figcaption .overlay {
+  position: absolute;
+  top: 13%;
+  bottom: 35%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translate(0px, 0%);
+  transform: translate(0px, 0%);
+}
+.flutEffect_12 figcaption .overlay img {
+  border-radius: 5px 5px 0 0;
+  display: inline-block;
+  position: absolute;
+  max-height: 100%;
+  max-width: 70%;
+  width: auto;
+  left: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out,-moz-transform 0.5s ease-in-out,-o-transform 0.5s ease-in-out,transform 0.5s ease-in-out;
+  -webkit-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
+}
+.flutEffect_12 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+.flutEffect_12:hover > img,
+.flutEffect_12.hover > img {
+  opacity: 0.5;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.flutEffect_12:hover figcaption h2,
+.flutEffect_12.hover figcaption h2 {
+  top: 65%;
+}
+.flutEffect_12:hover figcaption .overlay img,
+.flutEffect_12.hover figcaption .overlay img {
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+.flutEffect_12:hover figcaption::before,
+.flutEffect_12.hover figcaption::before {
+  opacity: 0.8;
+}
+
+/* ********************************************************
+	Effect 13: Comming Soon in Next Update .flutEffect_13
+***********************************************************/
+
+
+
+
+
+

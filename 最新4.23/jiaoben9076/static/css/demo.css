@@ -1,0 +1,259 @@
+
+/*
+	font-family: 'PT Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Exo', sans-serif;
+	
+*/
+body {
+	background: #E0E4CC;
+	color: #000;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Lato', Arial, sans-serif;
+	margin:0;
+	padding:0;
+	
+}
+
+
+html {
+font-family:sans-serif;
+-ms-text-size-adjust:100%;
+-webkit-text-size-adjust:100%;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+display:block;
+}
+a:focus {
+outline:thin dotted;
+}
+
+a:active,a:hover {
+outline:0;
+}
+img {
+border:0;
+}
+
+
+section {
+	background:#fff;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0;
+    text-align: center;
+	padding: 2em 0;
+}
+section:nth-child(even) {
+    background: #F6F7F2;
+}
+
+/*section  h2 {
+    margin: 0;
+    padding: 0 0 2em;
+}*/
+
+
+
+#menu {
+    display: block;
+    font-family: "Raleway",sans-serif;
+    padding: 1.5em 0;
+    width: 100%;
+}
+#menu .logo {
+    color: #acabab;
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#menu .logo span {
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+#menu .links {
+    float: right;
+}
+#menu .links span.active-menu {
+    color: #333;
+}
+#menu .links span.active-menu, #menu .links a {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+#menu .links a {
+    color: #aaa;
+    text-decoration: none;
+}
+#menu .last {
+    padding-right: 0 !important;
+}
+#header {
+	background:#a89ef1;
+	font-family: 'Raleway', sans-serif;
+	padding: 5em 0;
+	text-align: center;
+}
+#header i.fa {
+	color:#6559bc;
+	font-size:35px;
+}
+
+#header h1 {
+    color: #6559bc;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0.3em 0;
+}
+#header h3 small {
+	color:#6559bc;
+	font-weight:normal;
+    background: #fff none repeat scroll 0 0;
+    font-size: 13px;
+    padding: 0 12px;
+}
+#header h3 {
+    border-bottom: 1px solid #6559bc;
+    color: #fff;
+    margin: 0 auto 12px;
+    padding: 0 0 5px;
+    width: 35%;
+}
+
+#header p {
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.rtnav{
+	background:#6559bc;
+	width: 100%;
+	
+	border-bottom: 1px solid #e1e1e1;
+	/* animation magic */
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	z-index: 9999;
+	top: 0;
+	position: fixed;
+}
+.shrink {
+  padding: 20px 0;
+}
+.rtnav ul{
+	text-align:center;
+	margin:0;
+	padding:0;	
+}
+.rtnav ul li{
+	list-style:none;	
+	display:inline-block;
+}
+
+.rtnav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding:20px 10px;
+    outline: medium none;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.rtnav a:hover,
+.rtnav a:focus {
+	outline: none;
+}
+
+/* ----------------------------------------------------
+	PARALLAX SECTION
+------------------------------------------------------- */
+.fixed-parallax {
+  /*min-height: 100%;*/
+  background-size: cover;
+  /*background-attachment: fixed;*/
+  background-repeat: no-repet;
+  background-position: center center;
+  height: 20vh; 
+  color: #fff;
+}
+.parallax-aboutme {
+    background-image: url("../image/background.jpg");
+    background-size: cover;
+    height: 25vh;
+}
+.parallax-content-full {
+    width: 100%;
+}
+
+.parallax-content {
+    background: rgba(99, 93, 77, 0.6);
+    height: 100vh;
+    overflow: auto;
+	padding:0 30px;
+    position: absolute;
+    right: 0;
+    width: 25%;
+}.parallax-content h2{
+	color:#fff;	
+}
+.parallax-content a {
+    background: #05669e none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 35px;
+}
+.parallax-content a:hover{
+	background: #045481 none repeat scroll 0 0;
+}
+
+
+.parallax-iteminfo {
+    float: left;
+    height: auto;
+    min-height: 510px;
+    overflow: auto;
+    padding: 45px 30px;
+    position: absolute;
+    right: 0;
+    width: 96%;
+}
+.parallax-iteminfo h1{
+	margin:0;	
+}
+.parallax-iteminfo  h3{
+	margin:0;	
+}
+
+.letsgo {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+	background: #fafafa;
+	margin: 0 auto;
+	padding: 5em 2em;
+	text-align: center;
+}
+
